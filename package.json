@@ -5,13 +5,17 @@
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "nodemon index.js"
+        "start": "nodemon index.js",
+        "watch:sassprefixer": "onchange -d 100 sass/* -- node-sass --output-style compact -o css sass -- autoprefixer-cli -o css/style.css css/style.css"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "autoprefixer-cli": "^1.0.0",
         "colors": "^1.4.0",
-        "formidable": "^1.2.1"
+        "formidable": "^1.2.1",
+        "node-sass": "^4.13.1",
+        "onchange": "^6.1.0"
     }
 }
